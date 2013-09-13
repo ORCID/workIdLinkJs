@@ -2,7 +2,7 @@
   "name": "workIdLinkJs",
   "version": "0.0.0",
   "description": "Javascript library that creates links from work identifiers.",
-  "main": "workIdLinkJs",
+  "main": "workIdLink.js",
   "scripts": {
     "test": "node runTest.js"
   },
