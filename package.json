@@ -1,18 +1,18 @@
 {
-  "name": "workExternalIdentifierLinkJs",
+  "name": "workIdLinkJs",
   "version": "0.0.0",
   "description": "Javascript library that creates links from work identifiers.",
-  "main": "workExternalIdentifierLink.js",
+  "main": "workIdLinkJs",
   "scripts": {
     "test": "node runTest.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/rcpeters/workExternalIdentifierLinkJs.git"
+    "url": "git://github.com/rcpeters/workIdLinkJs.git"
   },
   "author": "rcpeters",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rcpeters/workExternalIdentifierLinkJs/issues"
+    "url": "https://github.com/rcpeters/workIdLinkJs/issues"
   }
 }

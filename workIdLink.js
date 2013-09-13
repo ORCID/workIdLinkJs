@@ -1,4 +1,4 @@
-/* START: workExternalIdentifierLinkJs v1 */
+/* START: workIdLinkJs v0.0.0 */
 
 /* browser and NodeJs compatible */
 (function(exports){
@@ -54,7 +54,7 @@
 	   return typeMap[type](id);
     };
 
-})(typeof exports === 'undefined'? this['workExternalIdentifierLinkJs']={}: exports);
+})(typeof exports === 'undefined'? this['workIdLinkJs']={}: exports);
 
-/* END: workExternalIdentifierLinkJs */
+/* END: workIdLinkJs */
 
