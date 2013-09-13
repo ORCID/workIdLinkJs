@@ -1,6 +1,6 @@
 {
   "name": "work-id-link-js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Javascript library that creates links from work identifiers.",
   "main": "workIdLink.js",
   "scripts": {
@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/rcpeters/workIdLinkJs.git"
+    "url": "git://github.com/ORCID/workIdLinkJs.git"
   },
   "author": "rcpeters",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rcpeters/workIdLinkJs/issues"
+    "url": "https://github.com/ORCID/workIdLinkJs/issues"
   }
 }
