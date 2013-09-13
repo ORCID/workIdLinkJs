@@ -1,4 +1,5 @@
 /* START: workIdLinkJs v0.0.2 */
+/* https://github.com/ORCID/workIdLinkJs */
 
 /* browser and NodeJs compatible */
 (function(exports){
@@ -17,6 +18,7 @@
       };
    }
 
+   //add new method to string
    if (typeof String.prototype.trim != 'function') {  
       String.prototype.trim = function () {  
          return this.replace(/^\s+|\s+$/g,'');  
