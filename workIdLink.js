@@ -119,22 +119,6 @@
       return 'http://zentralblatt-math.org/zmath/en/search/?q=an:' + id + '&format=complete';
    };
 
-   typeMap[''] = function (id) {
-      if (id.toLowerCase().startsWith('')) return 'http://' + id;
-      return '' + id;
-   };
-
-   typeMap[''] = function (id) {
-      if (id.toLowerCase().startsWith('')) return 'http://' + id;
-      return '' + id;
-   };
-
-   typeMap[''] = function (id) {
-      if (id.toLowerCase().startsWith('')) return 'http://' + id;
-      return '' + id;
-   };
-
-
    exports.getLink = function(id, type) {
       if (id == null) return null;
       id = id.trim();
@@ -144,6 +128,15 @@
       if (!typeMap.hasOwnProperty(type)) return null;
       return typeMap[type](id);
     };
+
+   exports.getTypes = function() {
+      var types = '';
+      for(i in typeMap) {
+          if (i != 'hasOwnProperty')
+          types = types + ' ' + i;
+      }
+      return types;
+   }
 
 })(typeof exports === 'undefined'? this['workIdLinkJs']={}: exports);
 

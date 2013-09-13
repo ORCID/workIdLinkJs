@@ -1,6 +1,10 @@
 var assert = require('assert');
 var workIdLink = require('./workIdLink.js');
 
+console.log('Types:');
+console.log(   workIdLink.getTypes());
+
+console.log('');
 console.log('Testing:');
 
 console.log('   null id returns null');
