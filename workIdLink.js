@@ -1,4 +1,4 @@
-/* START: workIdLinkJs v0.0.0 */
+/* START: workIdLinkJs v0.0.1 */
 
 /* browser and NodeJs compatible */
 (function(exports){
