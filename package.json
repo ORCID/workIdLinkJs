@@ -1,5 +1,5 @@
 {
-  "name": "workIdLinkJs",
+  "name": "work-id-link-js",
   "version": "0.0.0",
   "description": "Javascript library that creates links from work identifiers.",
   "main": "workIdLink.js",

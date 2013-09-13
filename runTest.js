@@ -1,5 +1,5 @@
 var assert = require('assert');
-var workIdLink = require('./workExternalIdentifierLink.js');
+var workIdLink = require('./workIdLink.js');
 
 console.log('Testing:');
 
