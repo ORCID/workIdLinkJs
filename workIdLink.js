@@ -1,4 +1,4 @@
-/* START: workIdLinkJs v0.0.2 */
+/* START: workIdLinkJs v0.0.3 */
 /* https://github.com/ORCID/workIdLinkJs */
 
 /* browser and NodeJs compatible */
@@ -52,10 +52,9 @@
       return 'http://dx.doi.org/' + id;
    };
 
-   /* we should find a better source */
    typeMap['isbn'] = function (id) {
-      if (id.toLowerCase().startsWith('amazon.com/dp/')) return 'http://' + id;
-      return 'http://www.amazon.com/dp/' + id.replace(/\-/g, '');
+      if (id.toLowerCase().startsWith('amazon.com/dp/') || id.toLowerCase().startsWith('www.worldcat.org')) return 'http://' + id;
+      return 'http://www.worldcat.org/isbn/' + id.replace(/\-/g, '');
    };
 
    typeMap['jfm'] = function (id) {
