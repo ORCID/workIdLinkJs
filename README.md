@@ -20,7 +20,7 @@ Javascript library that creates links from work identifiers.
 
 ## Using in [Node.js](http://nodejs.org/)
    Install ```npm install work-id-link-js```, require the module 
-   ``var workIdLink = require('workIdLink.js');`` and call
+   ``var workIdLink = require('work-id-link-js');`` and call
    ``workIdLink.getLink('10.1038/news070508-7', 'doi')``.
 
    
