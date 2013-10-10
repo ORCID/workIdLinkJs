@@ -1,4 +1,4 @@
-/* START: workIdLinkJs v0.0.3 */
+/* START: workIdLinkJs v0.0.4 */
 /* https://github.com/ORCID/workIdLinkJs */
 
 /* browser and NodeJs compatible */
@@ -98,9 +98,16 @@
       return 'http://www.ncbi.nlm.nih.gov/pubmed/' + id;
    };
 
+   /* 
+    * We need a method of determining www.ncbi.nlm.nih.gov identifiers
+    * vs europepmc.org identifiers
+    * http://www.ncbi.nlm.nih.gov/pubmed/
+    * http://europepmc.org/abstract/med/
+    */
    typeMap['pmid'] = function (id) {
       if (id.toLowerCase().startsWith('www.ncbi.nlm.nih.gov')) return 'http://' + id;
-      return 'http://www.ncbi.nlm.nih.gov/pubmed/' + id;
+      if (id.toLowerCase().startsWith('europepmc.org')) return 'http://' + id;
+      return 'http://europepmc.org/abstract/med/' + id;
    };
 
    typeMap['rfc'] = function (id) {

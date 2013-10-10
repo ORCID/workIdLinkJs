@@ -33,7 +33,7 @@ var testTypes = [
    ['ol', 'OL23086206M', 'http://openlibrary.org/b/OL23086206M'], 
    ['osti', '5102995', 'http://www.osti.gov/energycitations/product.biblio.jsp?osti_id=5102995'], 
    ['pmc', '1959482', 'http://www.ncbi.nlm.nih.gov/pubmed/1959482'], 
-   ['pmid', '16911322', 'http://www.ncbi.nlm.nih.gov/pubmed/16911322'], 
+   ['pmid', '16911322', 'http://europepmc.org/abstract/med/16911322'], 
    ['rfc', 'RFC 5000', 'http://www.rfc-editor.org/rfc/rfc5000.txt'], 
    ['ssrn', '2016874', 'http://papers.ssrn.com/abstract_id=2016874'], 
    ['zbl', 'pre06099612', 'http://zentralblatt-math.org/zmath/en/search/?q=an:pre06099612&format=complete'] 
