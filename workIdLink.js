@@ -94,6 +94,7 @@
    };
 
    typeMap['pmc'] = function (id) {
+      if (id.toLowerCase().startsWith('pmc')) return 'http://europepmc.org/articles/' + id;
       if (id.toLowerCase().startsWith('www.ncbi.nlm.nih.gov')) return 'http://' + id;
       return 'http://www.ncbi.nlm.nih.gov/pubmed/' + id;
    };
