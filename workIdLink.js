@@ -1,4 +1,4 @@
-/* START: workIdLinkJs v0.0.4 */
+/* START: workIdLinkJs v0.0.5 */
 /* https://github.com/ORCID/workIdLinkJs */
 
 /* browser and NodeJs compatible */
