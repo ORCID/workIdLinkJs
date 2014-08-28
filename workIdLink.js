@@ -1,4 +1,4 @@
-/* START: workIdLinkJs v0.0.5 */
+/* START: workIdLinkJs v0.0.6 */
 /* https://github.com/ORCID/workIdLinkJs */
 
 /* browser and NodeJs compatible */
@@ -59,7 +59,8 @@
 
    typeMap['jfm'] = function (id) {
       if (id.toLowerCase().startsWith('www.zentralblatt-math.org')) return 'http://' + id;
-      return 'http://www.zentralblatt-math.org/zmath/en/search/?q=an:' + id + '&format=complete';
+      if (id.toLowerCase().startsWith('zbmath.org/?q=an:')) return 'http://' + id;
+      return 'http://zbmath.org/?q=an:' + id + '&format=complete';
    };
 
    typeMap['jstor'] = function (id) {
@@ -125,7 +126,8 @@
 
    typeMap['zbl'] = function (id) {
       if (id.toLowerCase().startsWith('zentralblatt-math.org')) return 'http://' + id;
-      return 'http://zentralblatt-math.org/zmath/en/search/?q=an:' + id + '&format=complete';
+      if (id.toLowerCase().startsWith('zbmath.org/?q=an:')) return 'http://' + id;
+      return 'http://zbmath.org/?q=an:' + id + '&format=complete';
    };
 
    exports.getLink = function(id, type) {
