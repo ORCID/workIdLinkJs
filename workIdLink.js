@@ -52,6 +52,11 @@
       return 'http://dx.doi.org/' + id;
    };
 
+   typeMap['ethos'] = function (id) {
+      if (id.toLowerCase().startsWith('ethos.bl.uk')) return 'http://' + id;
+      return 'http://ethos.bl.uk/OrderDetails.do?uin=' + id;
+   };
+
    typeMap['isbn'] = function (id) {
       if (id.toLowerCase().startsWith('amazon.com/dp/') || id.toLowerCase().startsWith('www.worldcat.org')) return 'http://' + id;
       return 'http://www.worldcat.org/isbn/' + id.replace(/\-/g, '');
