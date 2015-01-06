@@ -20,10 +20,10 @@ var testTypes = [
    ['arxiv', '0706.0001', 'http://arxiv.org/abs/0706.0001'], 
    ['asin', '020530902X', 'http://www.amazon.com/dp/020530902X'], 
    ['bibcode', '1974AJ.....79..819H', 'http://adsabs.harvard.edu/abs/1974AJ.....79..819H'], 
-   ['doi', '10.1038/news070508-7', 'http://dx.doi.org/10.1038/news070508-7'], 
+   ['doi', '10.1038/news070508-7', 'http://dx.doi.org/10.1038%2Fnews070508-7'], 
    ['ethos', 'uk.bl.ethos.532624', 'http://ethos.bl.uk/OrderDetails.do?uin=uk.bl.ethos.532624'], 
    ['isbn', '0-205-30902-X', 'http://www.worldcat.org/isbn/020530902X'], 
-   ['jfm', '54.0271.04', 'http://zbmath.org/?q=an:54.0271.04&format=complete'], 
+   ['jfm', '54.0271.04', 'http://zbmath.org/?q=an%3A54.0271.04&format=complete'], 
    ['jstor', '1498220', 'http://www.jstor.org/stable/1498220'], 
    ['jstor', 'www.jstor.org/stable/1498220', 'http://www.jstor.org/stable/1498220'], 
    ['jstor', 'dx.doi.org/1498220', 'http://dx.doi.org/1498220'], 
@@ -38,7 +38,7 @@ var testTypes = [
    ['pmid', '16911322', 'http://europepmc.org/abstract/med/16911322'], 
    ['rfc', 'RFC 5000', 'http://www.rfc-editor.org/rfc/rfc5000.txt'], 
    ['ssrn', '2016874', 'http://papers.ssrn.com/abstract_id=2016874'], 
-   ['zbl', 'pre06099612', 'http://zbmath.org/?q=an:pre06099612&format=complete'] 
+   ['zbl', 'pre06099612', 'http://zbmath.org/?q=an%3Apre06099612&format=complete'] 
 ];
 
 for (i in testTypes) {

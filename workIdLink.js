@@ -1,4 +1,4 @@
-/* START: workIdLinkJs v0.0.6 */
+/* START: workIdLinkJs v0.0.7 */
 /* https://github.com/ORCID/workIdLinkJs */
 
 /* browser and NodeJs compatible */
@@ -33,76 +33,76 @@
    
    typeMap['arxiv'] = function (id) {
       if (id.toLowerCase().startsWith('arxiv.org')) return 'http://' + id;
-      if (id.startsWith('arXiv:')) return 'http://arxiv.org/abs/' + id.substring(6);
-      return 'http://arxiv.org/abs/' + id;
+      if (id.startsWith('arXiv:')) return 'http://arxiv.org/abs/' + encodeURIComponent(id.substring(6));
+      return 'http://arxiv.org/abs/' + encodeURIComponent(id);
    };
    
    typeMap['asin'] = function (id) {
       if (id.toLowerCase().startsWith('amazon.') || id.startsWith('www.amazon.')) return 'http://' + id;
-      return 'http://www.amazon.com/dp/' + id;
+      return 'http://www.amazon.com/dp/' + encodeURIComponent(id);
    };
 
    typeMap['bibcode'] = function (id) {
       if (id.toLowerCase().startsWith('adsabs.harvard.edu')) return 'http://' + id;
-      return 'http://adsabs.harvard.edu/abs/' + id;
+      return 'http://adsabs.harvard.edu/abs/' + encodeURIComponent(id);
    };
    
    typeMap['doi'] = function (id) {
       if (id.toLowerCase().startsWith('dx.doi.org') || id.startsWith('dx.doi.org')) return 'http://' + id;
-      return 'http://dx.doi.org/' + id;
+      return 'http://dx.doi.org/' + encodeURIComponent(id);
    };
 
    typeMap['ethos'] = function (id) {
       if (id.toLowerCase().startsWith('ethos.bl.uk')) return 'http://' + id;
-      return 'http://ethos.bl.uk/OrderDetails.do?uin=' + id;
+      return 'http://ethos.bl.uk/OrderDetails.do?uin=' + encodeURIComponent(id);
    };
 
    typeMap['isbn'] = function (id) {
       if (id.toLowerCase().startsWith('amazon.com/dp/') || id.toLowerCase().startsWith('www.worldcat.org')) return 'http://' + id;
-      return 'http://www.worldcat.org/isbn/' + id.replace(/\-/g, '');
+      return 'http://www.worldcat.org/isbn/' + encodeURIComponent(id.replace(/\-/g, ''));
    };
 
    typeMap['jfm'] = function (id) {
       if (id.toLowerCase().startsWith('www.zentralblatt-math.org')) return 'http://' + id;
       if (id.toLowerCase().startsWith('zbmath.org/?q=an:')) return 'http://' + id;
-      return 'http://zbmath.org/?q=an:' + id + '&format=complete';
+      return 'http://zbmath.org/?q=' + encodeURIComponent('an:' + id ) + '&format=complete';
    };
 
    typeMap['jstor'] = function (id) {
       if (id.toLowerCase().startsWith('dx.doi.org') || id.startsWith('www.jstor.org')) return 'http://' + id;
-      return 'http://www.jstor.org/stable/' + id;
+      return 'http://www.jstor.org/stable/' + encodeURIComponent(id);
    };
 
    typeMap['lccn'] = function (id) {
       if (id.toLowerCase().startsWith('lccn.loc.gov')) return 'http://' + id;
-      return 'http://lccn.loc.gov/' + id;
+      return 'http://lccn.loc.gov/' + encodeURIComponent(id);
    };
 
    typeMap['mr'] = function (id) {
       id = id.match(/[^\(]*/)[0];
       if (id.toLowerCase().startsWith('ams.org/mathscinet-getitem')) return 'http://' + id;
-      return 'http://www.ams.org/mathscinet-getitem?mr=' + id;
+      return 'http://www.ams.org/mathscinet-getitem?mr=' + encodeURIComponent(id);
    };
 
    typeMap['oclc'] = function (id) {
       if (id.toLowerCase().startsWith('worldcat.org')) return 'http://' + id;
-      return 'http://www.worldcat.org/oclc/' + id;
+      return 'http://www.worldcat.org/oclc/' + encodeURIComponent(id);
    };
 
    typeMap['ol'] = function (id) {
       if (id.toLowerCase().startsWith('openlibrary.org/b/')) return 'http://' + id;
-      return 'http://openlibrary.org/b/' + id;
+      return 'http://openlibrary.org/b/' + encodeURIComponent(id);
    };
  
    typeMap['osti'] = function (id) {
       if (id.toLowerCase().startsWith('www.osti.gov')) return 'http://' + id;
-      return 'http://www.osti.gov/energycitations/product.biblio.jsp?osti_id=' + id;
+      return 'http://www.osti.gov/energycitations/product.biblio.jsp?osti_id=' + encodeURIComponent(id);
    };
 
    typeMap['pmc'] = function (id) {
       if (id.toLowerCase().startsWith('pmc')) return 'http://europepmc.org/articles/' + id;
       if (id.toLowerCase().startsWith('www.ncbi.nlm.nih.gov')) return 'http://' + id;
-      return 'http://www.ncbi.nlm.nih.gov/pubmed/' + id;
+      return 'http://www.ncbi.nlm.nih.gov/pubmed/' + encodeURIComponent(id);
    };
 
    /* 
@@ -114,25 +114,25 @@
    typeMap['pmid'] = function (id) {
       if (id.toLowerCase().startsWith('www.ncbi.nlm.nih.gov')) return 'http://' + id;
       if (id.toLowerCase().startsWith('europepmc.org')) return 'http://' + id;
-      return 'http://europepmc.org/abstract/med/' + id;
+      return 'http://europepmc.org/abstract/med/' + encodeURIComponent(id);
    };
 
    typeMap['rfc'] = function (id) {
       id = id.replace(/\s/g,'');
       id = id.toLowerCase();
       if (id.toLowerCase().startsWith('www.rfc-editor.org/rfc/')) return 'http://' + id;
-      return 'http://www.rfc-editor.org/rfc/' + id + '.txt';
+      return 'http://www.rfc-editor.org/rfc/' + encodeURIComponent(id + '.txt');
    };
 
    typeMap['ssrn'] = function (id) {
       if (id.toLowerCase().startsWith('papers.ssrn.com')) return 'http://' + id;
-      return 'http://papers.ssrn.com/abstract_id=' + id;
+      return 'http://papers.ssrn.com/abstract_id=' + encodeURIComponent(id);
    };
 
    typeMap['zbl'] = function (id) {
       if (id.toLowerCase().startsWith('zentralblatt-math.org')) return 'http://' + id;
-      if (id.toLowerCase().startsWith('zbmath.org/?q=an:')) return 'http://' + id;
-      return 'http://zbmath.org/?q=an:' + id + '&format=complete';
+      if (id.toLowerCase().startsWith('zbmath.org/?q=an')) return 'http://' + id;
+      return 'http://zbmath.org/?q=' + encodeURIComponent('an:' + id ) + '&format=complete';
    };
 
    exports.getLink = function(id, type) {
