@@ -20,7 +20,7 @@ var testTypes = [
    ['arxiv', '0706.0001', 'http://arxiv.org/abs/0706.0001'], 
    ['asin', '020530902X', 'http://www.amazon.com/dp/020530902X'], 
    ['bibcode', '1974AJ.....79..819H', 'http://adsabs.harvard.edu/abs/1974AJ.....79..819H'], 
-   ['doi', '10.1038/news070508-7', 'http://dx.doi.org/10.1038%2Fnews070508-7'], 
+   ['doi', '10.1038/news070508-7', 'http://dx.doi.org/10.1038/news070508-7'], 
    ['ethos', 'uk.bl.ethos.532624', 'http://ethos.bl.uk/OrderDetails.do?uin=uk.bl.ethos.532624'], 
    ['isbn', '0-205-30902-X', 'http://www.worldcat.org/isbn/020530902X'], 
    ['jfm', '54.0271.04', 'http://zbmath.org/?q=an%3A54.0271.04&format=complete'], 
